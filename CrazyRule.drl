@@ -1,0 +1,78 @@
+package com.sample
+ 
+import com.sample.CrazyMachines;
+ import com.sample.VideoCard;
+ 
+rule "loudRule1"
+    when
+       g: CrazyMachines( cpuSpeedKHZ >3) and CrazyMachines( videoCardType !=VideoCard.none )
+    then
+         g.setLoud(true);
+end
+
+rule "loudRule2"
+    when
+       g: CrazyMachines( memoryGB >16) 
+    then
+         g.setLoud(true);
+end
+
+
+
+rule "cheapRule1"
+    when
+       g: CrazyMachines( price$ <1000) 
+    then
+         g.setCheap(true);
+end
+
+rule "cheapRule2"
+    when
+       g: CrazyMachines( price$ >1000) 
+    then
+         g.setExpensive(true);
+end
+
+
+rule "gameRule1"
+    when
+       g: CrazyMachines( videoCardType ==VideoCard.premium) 
+    then
+         g.setCanGame(true);
+         g.setCanCrunchNos(true);
+end
+
+rule "gameRule2"
+    when
+       g: CrazyMachines( videoCardType !=VideoCard.none) and CrazyMachines( cpuSpeedKHZ >2) 
+    then
+         g.setCanGame(true);
+end
+
+rule "numbercruncherRule"
+    when
+       g: CrazyMachines( memoryGB >4) and CrazyMachines( cpuSpeedKHZ >4) 
+    then
+         g.setCanGame(true);
+end
+
+rule "hotRule1"
+    when
+     g: CrazyMachines( memoryGB >8 )
+    then
+       g.setHot(true);
+end
+
+rule "hotRule2"
+    when
+       g: CrazyMachines(cpuSpeedKHZ >4)  
+    then
+       g.setHot(true);
+end
+
+rule "risky"
+    when
+       g: CrazyMachines(cheap==true)  and CrazyMachines(hot==true)
+    then
+       g.setRisky(true);
+end
