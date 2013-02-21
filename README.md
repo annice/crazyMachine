@@ -7,4 +7,4 @@ CrazyMachine Exercise :
 3. Crazy.drl: Set of rules in drools to analyse a machine's features given the input parameters
 
 RedPill Excercise:
-RedPill.java: The duration values in seconds are given for each of the specified task
+RedPill.java: The duration values in hours are given for each of the specified task
