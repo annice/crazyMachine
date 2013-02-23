@@ -1,29 +1,29 @@
 package com.rally.redpill;
 
-  import java.io.BufferedReader;
-	import java.io.IOException;
-	import java.io.InputStream;
-	import java.io.InputStreamReader;
-	import java.io.Reader;
-	import java.net.URL;
-	import java.nio.charset.Charset;
-	import java.sql.Timestamp;
-	import java.text.ParseException;
-	import java.text.SimpleDateFormat;
-	import java.util.Calendar;
-	import java.util.Date;
-	import java.util.GregorianCalendar;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.net.URL;
+import java.nio.charset.Charset;
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Iterator;
-	import java.util.Locale;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Scanner;
 
-	import org.json.JSONArray;
-	import org.json.JSONException;
-	import org.json.JSONObject;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.joda.time.DateMidnight;
-	import org.joda.time.DateTime;
-    import org.joda.time.DateTimeFieldType;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeFieldType;
 import org.joda.time.DateTimeZone;
 import org.joda.time.Days;
 import org.joda.time.Months;
@@ -31,14 +31,14 @@ import org.joda.time.ReadableInstant;
 import org.joda.time.Seconds;
 import org.joda.time.Instant;
 import org.joda.time.Interval;
-    import org.joda.time.LocalDateTime;
+import org.joda.time.LocalDateTime;
 import org.joda.time.Years;
 import org.joda.time.field.MillisDurationField;
-    import org.joda.time.format.DateTimeFormatter;
-    import org.joda.time.format.ISODateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.format.ISODateTimeFormat;
 import org.joda.time.tz.UTCProvider;
 import java.util.HashMap;
-    
+
 	public class RedPill {
 		
      static HashMap<String, Integer> hmapfeb=new HashMap<String, Integer>();
